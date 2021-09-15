@@ -212,8 +212,6 @@ jobs:
         path: ${{runner.workspace}}/results/run_${{matrix.jit-engine}}_${{matrix.run-no}}.json
 
 
-
-
   compare_mips:
     needs: benchmark
     runs-on: ubuntu-latest
