@@ -433,6 +433,5 @@ jobs:
         with:
           name: |
             wiki.md
-            issue.md
-            performance_metrics.svg
+
 
