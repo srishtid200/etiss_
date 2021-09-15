@@ -415,12 +415,12 @@ jobs:
     continue-on-error: true
 
     steps:
-      - name: delete unnecessary artifacts
-        uses: geekyeggo/delete-artifact@v1
-        with:
-          name: |
-            wiki.md
-            issue.md
+      - name: Checkout
+        uses: actions/checkout@v2
 
+      - name: Delete Artifact
+        uses: jimschubert/delete-artifacts-action@v1
+        with:
+          min_bytes: '0'
 
 
