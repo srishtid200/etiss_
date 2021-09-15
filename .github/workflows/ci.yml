@@ -240,7 +240,7 @@ jobs:
       - name: get old benchmark results
         uses: actions/checkout@v2
         with:
-          ref: benchmark_results
+          ref: benchmark_result
           path: benchmark_results_old
 
       - name: creating a directory results_ for storing wiki text, issue text and the graph
@@ -263,7 +263,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./benchmark_results_old
-          publish_branch: benchmark_results
+          publish_branch: benchmark_result
           enable_jekyll: true
 
       - name: uploading benchmark_results
