@@ -292,12 +292,6 @@ jobs:
           name: wiki.md
           path: results_/wiki.md
 
-      # - name: delete unnecessary artifacts
-      #   uses: geekyeggo/delete-artifact@v1
-      #   with:
-      #     name: |
-      #       stats_file.json
-
 
   display-push:
     needs: compare_mips
@@ -384,11 +378,6 @@ jobs:
           edit-mode: replace
           body: ${{ steps.get-comment-body.outputs.body }}
 
-      # - name: Delete Artifacts
-      #   uses: jimschubert/delete-artifacts-action@v1
-      #   with:
-      #     min_bytes: '0'
-
 
   display-wiki:
     needs: compare_mips
@@ -433,5 +422,7 @@ jobs:
         with:
           name: |
             wiki.md
+            issue.md
+
 
 
